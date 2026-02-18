@@ -63,6 +63,15 @@ section {
     background-color: rgb(198, 220, 175);
 }
 
+#Skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 /* #Experience ul{
 
     list-style-type: none;
@@ -103,7 +112,7 @@ h1{
 
 header nav ul{
     gap: 2rem;
-}
+} 
 
 #Connect ul{
     grid-template-columns: repeat(3,1fr);
