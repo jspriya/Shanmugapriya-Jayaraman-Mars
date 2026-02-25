@@ -79,12 +79,15 @@ section {
 } */
 
 #Connect{
-    background-color: rgb(165, 215, 168);
+    background-color: rgb(198, 220, 175);
+    
 }
 
 #Connect a{
     color: blue;
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
+    background-color: rgb(196, 196, 240);
+    border-radius:0.225rem;
 }
 #Connect ul{
 
@@ -100,6 +103,75 @@ section {
     text-decoration: underline;
 
 }
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  /* Space between each form group */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  /* Input fields */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+
+  button {
+    width: 50%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #5383eb;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1e4ed8;
+  }
+
+  .remove-button {
+    width: 40%;
+    max-width: 120px;
+    margin-left: 1rem; 
+  }
+ 
+ #Projects{
+    padding:1.5rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap: 0.625rem;
+    margin: 0;
+} 
+
+  #Projects li {
+    list-style:none;
+    background-color:rgb(196, 196, 240);
+    padding: 0.625rem 1.25rem;
+    border-radius:0.625rem;
+    margin:0.25rem;
+    justify-content: center;
+  }
 
 /*---------------------------------------------------------------------*/
 /* TABLET */
@@ -119,9 +191,16 @@ header nav ul{
     gap: 1.25rem;
     justify-content: center
 }
+
+
+#Form{
+    background-color: rgb(198, 220, 175);
 }
 
-
+#Messages{
+    background-color: rgb(198, 220, 175);
+}
+}
 /*--------------------------------------------------------------------*/
 /* DESKTOP */
 /*--------------------------------------------------------------------*/
