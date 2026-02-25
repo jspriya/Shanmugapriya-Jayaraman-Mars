@@ -106,3 +106,52 @@ messageForm.addEventListener("submit", function(event){
  // Clear form 
  messageForm.reset();
 });
+
+// Get the repositories from github
+
+fetch("https://api.github.com/users/jspriya/repos")
+.then((response) => {
+  if(!response.ok) {
+    throw new Error("Request failed");
+  }
+return response.json(); 
+})
+.then((repos) => {
+console.log("Repositories: ",repos);
+// Get the projects section
+const projectSection = document.getElementById("Projects");
+// Select the list in the Projects Section
+const projectList = projectSection.querySelector("ul");
+// Clear the content
+projectList.innerHTML = "";
+
+// Iterate thru all the public repositories
+for (let i = 0; i < repos.length; i++){
+  // Create a new list item
+  const project = document.createElement("li");
+  // Create a link for the list item
+  const link = document.createElement("a");
+  // Set the link url
+  link.href = repos[i].html_url;
+  // ZSet the text for the link
+  link.textContent = repos[i].name;
+  // Append the link  to the list item
+  project.appendChild(link);
+  // Append the list item to the list of projects
+  projectList.appendChild(project);
+}
+})
+.catch((error) => {
+// Log the error -- this didnt work - chk again
+console.error("Error fetching repositories:", error);
+// Get the Projects section
+const projectSection = document.getElementById("Projects");
+// Show error message on the browser
+const errorMessage = document.createElement("p");
+errorMessage.innerHTML = 'Unable to load projects. Please try again later.';
+projectSection.appendChild(errorMessage);
+});
+
+
+
+
