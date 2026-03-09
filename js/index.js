@@ -31,12 +31,12 @@ footer.style.textAlign = "center";
 
 // ---------Skills-------------
 
-const skills = ["Javascript","HTML","CSS","Git","Github"];
+const skills = ["JavaScript","HTML","CSS","Git","GitHub"];
 
 // Select the skills section by id
 const skillsSection = document.getElementById("Skills");
 
-// seelect the empty <ul> list
+// select the empty <ul> list
 const skillsList = skillsSection.querySelector("ul");
 
 // Loop thru skills array
@@ -99,7 +99,7 @@ messageForm.addEventListener("submit", function(event){
 
   //Append the remove button to the new message
   newMessage.appendChild(removeButton); 
-  
+
   // Append the new message to the message list
   messageList.appendChild(newMessage)
 
